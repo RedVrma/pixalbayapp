@@ -1,15 +1,24 @@
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:pixalbayapp/data/api/PixelBayService.dart';
+import 'package:pixalbayapp/data/model/PixelBayImageModel.dart';
 
-void main() {
-  runApp(const MyApp());
+Future<void> main() async {
+  await dotenv.load(fileName: "../lib/.env");
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  MyApp({super.key});
+
+  PixelBayService service = PixelBayService(apiClient: Dio());
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    fetchImages();
+
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
@@ -33,6 +42,11 @@ class MyApp extends StatelessWidget {
       ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
+  }
+
+  Future<void> fetchImages() async {
+    List<PixelBayImageModel> a = await service.fetchImages("yellow", 10, 1);
+    print("List of images size ${a.length}");
   }
 }
 

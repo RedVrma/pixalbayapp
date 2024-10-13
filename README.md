@@ -1,6 +1,7 @@
 # pixalbayapp
 
-A indeed assignment.
+# SetUp PixelBay Environment Api Key
+clone the .env_example to a new .env file in same directory and put your PixelBay Api key in it.
 
 ## Getting Started
 
