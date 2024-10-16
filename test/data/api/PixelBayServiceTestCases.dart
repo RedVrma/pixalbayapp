@@ -2,7 +2,7 @@ import 'package:dio/dio.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
-import 'package:pixalbayapp/data/api/PixelBayService.dart';
+import 'package:pixalbayapp/data/api/impl/PixelBayService.dart';
 
 class MockDio extends Mock implements Dio {}
 
