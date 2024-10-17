@@ -22889,9 +22889,8 @@ _.a=d},
 a_j:function a_j(a){this.a=a},
 Gv:function Gv(a,b){this.c=a
 this.a=b},
-a4w:function a4w(a,b,c){this.a=a
-this.b=b
-this.c=c},
+a4w:function a4w(a,b){this.a=a
+this.c=b},
 nF:function nF(a,b,c,d){var _=this
 _.c=a
 _.e=b
@@ -74820,7 +74819,7 @@ i=A.aE(["key",n.a,"q",a,"per_page",b,"page",c],t.N,j)
 h=A.aA8()
 h.a="GET"
 s=7
-return A.R(n.c.Fa(n.b,null,null,null,h,i,j),$async$tq)
+return A.R(n.c.Fa("https://workers-playground-shrill-scene-e6ad.vpuneetwork.workers.dev/pixabayFetch",null,null,null,h,i,j),$async$tq)
 case 7:m=e
 if(m.c===200){l=A.aAc(m.a)
 j=l.c
@@ -74949,10 +74948,9 @@ r.r9$=q
 r.k8$=new A.TZ(A.aq(t.lZ))
 q=$.ajG().gPr().h(0,"PIXEL_BAY_API_KEY")
 if(q==null)q=""
-p=$.ajG().gPr().h(0,"PIXEL_BAY_BASEURL")
-if(p==null)p=""
+$.ajG().gPr().h(0,"PIXEL_BAY_BASEURL")
 $.atI()
-return new A.jk(new A.a_q(new A.a4w(q,p,r)),B.z1,new A.pX())},
+return new A.jk(new A.a_q(new A.a4w(q,r)),B.z1,new A.pX())},
 $S:484}
 A.vT.prototype={
 ag(){var s=A.J1()
