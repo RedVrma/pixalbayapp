@@ -24,6 +24,7 @@ jobs:
       - name: 📝 Create .env file
         run: |
           echo "PIXEL_BAY_API_KEY=${{ secrets.PIXEL_BAY_KEY }}" > .env
+          echo "PIXEL_BAY_BASEURL=${{ secrets.PIXEL_BAY_BASEURL}}"> .env
 
       # Step 3: Build the Flutter web app
       - name: 🔨 Build Flutter Web
