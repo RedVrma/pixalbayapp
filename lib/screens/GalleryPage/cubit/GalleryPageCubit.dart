@@ -42,7 +42,7 @@ class GalleryPageCubit extends Cubit<GalleryPageState> {
         }
       }
     } catch (e) {
-      emit(GalleryPageError('Failed to load images'));
+      emit(GalleryPageError('Failed to load images ${e.toString()}'));
     }
   }
 }
