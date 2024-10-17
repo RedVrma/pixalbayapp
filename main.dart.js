@@ -22889,8 +22889,7 @@ _.a=d},
 a_j:function a_j(a){this.a=a},
 Gv:function Gv(a,b){this.c=a
 this.a=b},
-a4w:function a4w(a,b){this.a=a
-this.c=b},
+a4w:function a4w(a){this.c=a},
 nF:function nF(a,b,c,d){var _=this
 _.c=a
 _.e=b
@@ -74815,7 +74814,7 @@ T5(a,b,c){var s=0,r=A.L(t.Wh),q,p=2,o,n=this,m,l,k,j,i,h,g,f
 var $async$tq=A.M(function(d,e){if(d===1){o=e
 s=p}while(true)switch(s){case 0:p=4
 j=t.z
-i=A.aE(["key",n.a,"q",a,"per_page",b,"page",c],t.N,j)
+i=A.aE(["q",a,"per_page",b,"page",c],t.N,j)
 h=A.aA8()
 h.a="GET"
 s=7
@@ -74946,11 +74945,10 @@ o.sOy(s)
 q=o
 r.r9$=q
 r.k8$=new A.TZ(A.aq(t.lZ))
-q=$.ajG().gPr().h(0,"PIXEL_BAY_API_KEY")
-if(q==null)q=""
+$.ajG().gPr().h(0,"PIXEL_BAY_API_KEY")
 $.ajG().gPr().h(0,"PIXEL_BAY_BASEURL")
 $.atI()
-return new A.jk(new A.a_q(new A.a4w(q,r)),B.z1,new A.pX())},
+return new A.jk(new A.a_q(new A.a4w(r)),B.z1,new A.pX())},
 $S:484}
 A.vT.prototype={
 ag(){var s=A.J1()
