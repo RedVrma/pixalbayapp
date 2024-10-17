@@ -3,6 +3,8 @@
 # SetUp PixelBay Environment Api Key
 clone the .env_example to a new .env file in same directory and put your PixelBay Api key in it.
 
+# CloudFlare Proxy
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
