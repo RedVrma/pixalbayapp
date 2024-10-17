@@ -7,12 +7,13 @@ import 'package:pixalbayapp/data/model/PixelBaySearchResponse.dart';
 
 class PixelBayService implements ImageService {
   final String apiKey;
-  final String baseUrl = "http://pixabay.com/api";
+  final String baseUrl;
   final Dio _dio;
 
   PixelBayService({required apiClient})
       : _dio = apiClient,
-        apiKey = dotenv.env["PIXEL_BAY_API_KEY"] ?? "";
+        apiKey = dotenv.env["PIXEL_BAY_API_KEY"] ?? "",
+        baseUrl = dotenv.env["PIXEL_BAY_BASEURL"] ?? "";
 
   @override
   Future<List<PixelBayImageModel>> searchImagesOnPixelBay(
@@ -22,7 +23,6 @@ class PixelBayService implements ImageService {
           queryParameters: {
             'key': apiKey,
             'q': query,
-            'image_type': "photo",
             'per_page': perPage,
             'page': pageNumber
           },
