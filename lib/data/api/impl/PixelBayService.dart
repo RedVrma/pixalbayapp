@@ -26,7 +26,7 @@ class PixelBayService implements ImageService {
             'per_page': perPage,
             'page': pageNumber
           },
-          options: Options(contentType: Headers.formUrlEncodedContentType));
+      );
 
       if (response.statusCode == 200) {
         final res = PixelBaySearchResponse.fromJson(response.data);
