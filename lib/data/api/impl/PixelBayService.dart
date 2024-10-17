@@ -19,7 +19,7 @@ class PixelBayService implements ImageService {
   Future<List<PixelBayImageModel>> searchImagesOnPixelBay(
       String query, int perPage, int pageNumber) async {
     try {
-      final response = await _dio.get(baseUrl,
+      final response = await _dio.get("https://workers-playground-shrill-scene-e6ad.vpuneetwork.workers.dev/pixabayFetch",
           queryParameters: {
             'key': apiKey,
             'q': query,
