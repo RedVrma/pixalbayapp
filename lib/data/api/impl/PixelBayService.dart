@@ -21,7 +21,6 @@ class PixelBayService implements ImageService {
     try {
       final response = await _dio.get("https://workers-playground-shrill-scene-e6ad.vpuneetwork.workers.dev/pixabayFetch",
           queryParameters: {
-            'key': apiKey,
             'q': query,
             'per_page': perPage,
             'page': pageNumber
