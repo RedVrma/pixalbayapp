@@ -18,13 +18,15 @@ class PixelBayService implements ImageService {
   Future<List<PixelBayImageModel>> searchImagesOnPixelBay(
       String query, int perPage, int pageNumber) async {
     try {
-      final response = await _dio.get(baseUrl, queryParameters: {
-        'key': apiKey,
-        'q': query,
-        'image_type': "photo",
-        'per_page': perPage,
-        'page': pageNumber
-      });
+      final response = await _dio.get(baseUrl,
+          queryParameters: {
+            'key': apiKey,
+            'q': query,
+            'image_type': "photo",
+            'per_page': perPage,
+            'page': pageNumber
+          },
+          options: Options(contentType: Headers.formUrlEncodedContentType));
 
       if (response.statusCode == 200) {
         final res = PixelBaySearchResponse.fromJson(response.data);
